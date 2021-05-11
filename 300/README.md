@@ -36,6 +36,19 @@ $ git clone https://github.com/openfaas/faasd --depth=1
 $ cd faasd
 $ ./hack/install.sh
 ```
+
+This will result in:
+
+```
+2021/05/11 15:13:03 Writing to: "/var/lib/faasd/secrets/basic-auth-password"
+2021/05/11 15:13:03 Writing to: "/var/lib/faasd/secrets/basic-auth-user"
+Check status with:
+  sudo journalctl -u faasd --lines 100 -f
+
+Login with:
+  sudo cat /var/lib/faasd/secrets/basic-auth-password | faas-cli login -s
+Skipping caddy installation as FAASD_DOMAIN.
+```
 ---
 
 Use the instructions given to you to log in with ```$ faas-cli login```
