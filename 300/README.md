@@ -34,7 +34,7 @@ $ git clone https://github.com/openfaas/faasd --depth=1
 
 ```
 $ cd faasd
-$ ./hack/instal.sh
+$ ./hack/install.sh
 ```
 ---
 
