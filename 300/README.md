@@ -22,7 +22,20 @@ When should you use faasd over OpenFaaS on Kubernetes?
 - To deploy embedded apps in IoT and edge use-cases
 - To shrink-wrap applications for use with a customer or client
 
-[Deploy faasd](https://github.com/openfaas/faasd/)
+[Deploy faasd](https://github.com/openfaas/faasd/):
+
+***WARNING***: It's recommended that you do not install Docker on the same host as faasd, since 1) they may both use different versions of containerd and 2) docker's networking rules can disrupt faasd's networking. When using faasd - make your faasd server a faasd server, and build container image on your laptop or in a CI pipeline.
+
+In short, run these commands to install faasd:
+
+```
+$ git clone https://github.com/openfaas/faasd --depth=1
+```
+
+```
+$ cd faasd
+$ ./hack/instal.sh
+```
 ---
 
 Use the instructions given to you to log in with ```$ faas-cli login```
