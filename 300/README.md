@@ -51,6 +51,12 @@ Skipping caddy installation as FAASD_DOMAIN.
 ```
 ---
 
+Check the status as recommened above:
+
+```
+$ sudo journalctl -u faasd --lines 100 -f
+```
+
 Use the instructions given to you to log in with ```$ faas-cli login```
 
 You can try out one of the sample functions from the Function Store.
